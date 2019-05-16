@@ -51,14 +51,14 @@ void Snake::Reset()
 	mLives = 3;
 	mScore = 0;
 	alive = true;
-	mVelocity = 70;
+	mVelocity = 15;
 }
 
 void Snake::Cut(int segments)
 {
 	for (int i = 0; i < segments; i++)
 		mSnakeBody.pop_back();
-	--mLives;
+	   --mLives;
 	if (!mLives) {
 		lose();
 		return;
@@ -74,14 +74,14 @@ void Snake::Extend()
 	if (mSnakeBody.size() > 1) {
 		SnakeSegment& snakeTail = mSnakeBody[mSnakeBody.size() - 2];
 		if (snakeTail.position.x == snakeHead.position.x) {
-			if (snakeTail.position.y > snakeHead.position.y) {
+			if (snakeHead.position.y > snakeTail.position.y) {
 				mSnakeBody.push_back(SnakeSegment(snakeHead.position.x, snakeHead.position.y + 1));
 			}
 			else 
-			  mSnakeBody.push_back(SnakeSegment(snakeHead.position.x, snakeHead.position.y + 1));
+			  mSnakeBody.push_back(SnakeSegment(snakeHead.position.x, snakeHead.position.y - 1));
 		}
-		else if (snakeTail.position.y == snakeHead.position.y) {
-			if (snakeTail.position.x > snakeHead.position.x) {
+		else if (snakeHead.position.y == snakeTail.position.y) {
+			if (snakeHead.position.x > snakeTail.position.x) {
 				mSnakeBody.push_back(SnakeSegment(snakeHead.position.x+1, snakeHead.position.y));
 			}
 			else
@@ -100,7 +100,7 @@ void Snake::Extend()
 	}
 }
 
-void Snake::Update(sf::Time dT)
+void Snake::Update()
 {
 	if (mSnakeBody.empty()) return;
 	if (dir == Direction::NONE) return;
@@ -108,7 +108,7 @@ void Snake::Update(sf::Time dT)
 	checkCollision();
 }
 
-void Snake::Render(sf::RenderTarget& target)
+void Snake::Render(sf::RenderWindow& target)
 {
 	if (mSnakeBody.empty()) return;
 
@@ -117,7 +117,7 @@ void Snake::Render(sf::RenderTarget& target)
 	bodyRect.setPosition(head->position.x * blockSize, head->position.y * blockSize);
 	target.draw(bodyRect);
 
-	bodyRect.setFillColor(sf::Color::Blue);
+	bodyRect.setFillColor(sf::Color(188));
 	for (auto itr = mSnakeBody.begin() + 1; itr < mSnakeBody.end(); ++itr) {
 		bodyRect.setPosition(itr->position.x * blockSize, itr->position.y * blockSize);
 		target.draw(bodyRect);
@@ -168,7 +168,7 @@ void Snake::checkCollision()
 { 
 	if (mSnakeBody.size() < 5) return;
 	SnakeSegment& head = mSnakeBody.front();
-	for (auto itr = mSnakeBody.begin(); itr < mSnakeBody.end(); ++itr) {
+	for (auto itr = mSnakeBody.begin()+1; itr < mSnakeBody.end(); ++itr) {
 		if (itr->position == head.position) {
 			int seg = mSnakeBody.end() - itr;
 			Cut(seg);

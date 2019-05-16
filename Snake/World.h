@@ -1,14 +1,25 @@
 #pragma once
 #include "Snake.h"
+#include <random>
 class World
 {
 public:
-	World();
-	void update(sf::Time dt);
-	void Render();
+	World(sf::Vector2u size);
+	void Update(Snake& player);
+	void Render(sf::RenderWindow& target);
+
+	int getBlockSize();
+	void respawnApple();
 	
 
 private:
-	Snake* mSnake;
+	sf::Vector2u windSize;
+	sf::Vector2f mApple;
+	int blockSize;
+	
+
+	sf::CircleShape mAppleShape;
+	sf::RectangleShape mWorldBounds[4];
+
 };
 

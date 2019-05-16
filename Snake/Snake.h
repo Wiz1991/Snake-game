@@ -34,8 +34,8 @@ public:
 	void Cut(int segments);
 	void Extend();
 
-	void Update(sf::Time dT);
-	void Render(sf::RenderTarget& target);
+	void Update();
+	void Render(sf::RenderWindow& target);
 
 	sf::Vector2i getPosition();
 	int getLives();
