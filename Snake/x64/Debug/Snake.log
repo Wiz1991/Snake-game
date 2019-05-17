@@ -1,0 +1,50 @@
+﻿  Game.cpp
+  main.cpp
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\main.cpp(4): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Snake.cpp
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\Snake.cpp(8): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\Snake.cpp(117): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\Snake.cpp(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\Snake.cpp(149): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\Snake.cpp(173): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  World.cpp
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(11): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(16): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(16): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(18): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(18): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(61): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

@@ -4,6 +4,7 @@
 
 Snake::Snake(int l_blockSize)
 	: blockSize(l_blockSize)
+	
 {
 	bodyRect.setSize(sf::Vector2f(blockSize - 1, blockSize - 1));
 	Reset();
@@ -51,7 +52,7 @@ void Snake::Reset()
 	mLives = 3;
 	mScore = 0;
 	alive = true;
-	mVelocity = 15;
+	mVelocity = 12;
 }
 
 void Snake::Cut(int segments)

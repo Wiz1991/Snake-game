@@ -1,3 +1,50 @@
-﻿  main.cpp
-C:\Users\Wiz\source\repos\Snake\Snake\main.cpp(4): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Snake.vcxproj -> C:\Users\Wiz\source\repos\Snake\Debug\Snake.exe
+﻿  Game.cpp
+  World.cpp
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(19): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(19): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(21): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(21): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(36): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\World.cpp(84): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  main.cpp
+C:\Users\Wiz\Desktop\code\Snake-game\Snake\main.cpp(4): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Snake.vcxproj -> C:\Users\Wiz\Desktop\code\Snake-game\Debug\Snake.exe
